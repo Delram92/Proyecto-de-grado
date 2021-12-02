@@ -1,0 +1,15 @@
+Set de datos original
+    fecha  indice  inflacion_anual  inflacion_mensual  inflacion_anno_corrido
+0  202110    4.58              4.0                3.0                     2.0
+1  202109    4.51              4.0                3.0                     2.0
+2  202108    4.44              4.0                3.0                     2.0
+3  202107    3.97              4.0                3.0                     2.0
+4  202106    3.63              4.0                3.0                     2.0
+
+
+Cantidad de Filas y columnas: (346, 5) 
+
+Nombre columnas: Index(['fecha', 'indice', 'inflacion_anual', 'inflacion_mensual',
+       'inflacion_anno_corrido'],
+      dtype='object') 
+

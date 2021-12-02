@@ -19,18 +19,20 @@ class Sarimax:
         df = pd.read_csv ('data/mora_castilla_v3.csv', parse_dates=True)
         params=''
         if precio=='corriente':
-            dataset= df.drop(['primera_actualkg'], axis=1)
-            dataset = dataset.rename(
-                columns={'corriente_actualkg': 'corriente'})  ##Renombramiento para el valor de la mora corriente
-            ##Se adicionan los parametros dados de la evaluacion del modelo para precio corriente 0,27567.67067487708,"((2, 1, 2), (1, 1, 2, 7))"
-            params =  list([(2, 1, 2), (1, 1, 2, 7)])
+            dataset= df.drop(['primera'], axis=1)
+             ##Se adicionan los parametros dados de la evaluacion del modelo para precio corriente 0,27567.67067487708,"((2, 1, 2), (1, 1, 2, 7))"
+            result_best = pd.read_csv('results/'+precio+'res_best.csv')
+            result_best=result_best['param']
+            print('result_best',result_best[0].replace('((','(').replace('))',')'))
+            params =  list([(2, 1, 2), (2, 1, 1, 7)])
 
         else :
-            dataset= df.drop(['corriente_actualkg'], axis=1)
-            dataset = dataset.rename(
-                columns={'primera_actualkg': 'primera'})  ##Renombramiento para el valor de la mora primera
-            ##Se adicionan los parametros dados de la evaluacion del modelo para precio primera  0,27581.105386271483,"((2, 1, 2), (2, 1, 2, 7))"
-            params = list([(2, 1, 2), (2, 1, 2, 7)])
+            dataset= df.drop(['corriente'], axis=1)
+            result_best = pd.read_csv('results/' + precio + 'res_best.csv')
+            result_best = result_best['param']
+            print('result_best', result_best[0].replace('((', '(').replace('))', ')'))
+           ##Se adicionan los parametros dados de la evaluacion del modelo para precio primera  0,27581.105386271483,"((2, 1, 2), (2, 1, 2, 7))"
+            params = list([(1, 1, 1), (1, 1, 1, 7)])
 
         dataset['fecha'] = dataset['fecha'].astype(str)
         dataset['fecha'] = pd.to_datetime(dataset['fecha'])
@@ -42,7 +44,7 @@ class Sarimax:
         """Validacion de parametros para el modelo
         Division en prueba y test """
         n_sample = dataset.shape[0]
-        n_train = int(0.90 * n_sample) + 1 ##Entrenamiento
+        n_train = int(0.95 * n_sample) + 1 ##Entrenamiento
         n_forecast = n_sample - n_train ##Prueba
         ts_train = dataset[:n_train] ##Datos entrenamiento
         ts_test = dataset[n_train:] ##Datos test
@@ -78,7 +80,7 @@ class Sarimax:
         error = rmse(ts_test[precio], pred_test['prediccion'])
         print('\n'+'Error rmse='+str(round(error,2)), file=f)
 
-        prediccion_graf = model.predict(start=start, end=end + 30)
+        prediccion_graf = model.predict(start=start, end=end)
         prediccion_graf = pd.DataFrame(prediccion_graf)
         prediccion_graf.columns = ['prediccion']
         prediccion_graf.index.name = 'fecha'

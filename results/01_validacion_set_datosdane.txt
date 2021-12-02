@@ -1,0 +1,17 @@
+Set de datos original
+                 NOM_ABASTO  COD_ART  ...           NOM_ART  VAR_DIARIA
+0  Bogotá, D.C., Corabastos      135  ...  Mora de Castilla        3769
+1  Bogotá, D.C., Corabastos      135  ...  Mora de Castilla        3769
+2  Bogotá, D.C., Corabastos      135  ...  Mora de Castilla        4615
+3  Bogotá, D.C., Corabastos      135  ...  Mora de Castilla        4615
+4  Bogotá, D.C., Corabastos      135  ...  Mora de Castilla        5231
+
+[5 rows x 8 columns]
+
+
+Cantidad de Filas y columnas: (1428, 8) 
+
+Nombre columnas: Index(['NOM_ABASTO', 'COD_ART', 'PROM_DIARIO', 'VAL_MAX', 'VAL_MIN', 'Date',
+       'NOM_ART', 'VAR_DIARIA'],
+      dtype='object') 
+

@@ -18,13 +18,9 @@ class Sarimax_Test:
         #Lectura de los datos
         df = pd.read_csv ('data/mora_castilla_v3.csv', parse_dates=True)
         if precio=='corriente':
-            dataset= df.drop(['primera_actualkg'], axis=1)
-            dataset = dataset.rename(
-                columns={'corriente_actualkg': 'corriente'})  ##Renombramiento para el valor de la mora corriente
+            dataset= df.drop(['primera'], axis=1)
         else :
-            dataset= df.drop(['corriente_actualkg'], axis=1)
-            dataset = dataset.rename(
-                columns={'primera_actualkg': 'primera'})  ##Renombramiento para el valor de la mora primera
+            dataset= df.drop(['corriente'], axis=1)
 
         dataset['fecha'] = dataset['fecha'].astype(str)
         dataset['fecha'] = pd.to_datetime(dataset['fecha'])
@@ -34,9 +30,18 @@ class Sarimax_Test:
         dataset = dataset.sort_index()
         ##Validacion de estacionalidad
         valida_dataset = dataset[precio]
-        self.valida_estacionalidad(valida_dataset,precio)
+        self.valida_estacionalidad(valida_dataset,precio,'')
         ##Graficos estadisticos
         self.grafico_est(dataset, precio)
+
+        serie_semanal = dataset.resample('W').mean()
+        serie_dif=self.difference(serie_semanal[precio])
+        serie_dif.index = serie_semanal.index[1:]
+        self.valida_estacionalidad(serie_dif, precio, 'serie semanal dif')
+        self.grafico_est(serie_dif, precio+'semal_dif')
+
+
+
         """Validacion de parametros para el modelo
         Division en prueba y test """
         n_sample = dataset.shape[0]
@@ -46,7 +51,7 @@ class Sarimax_Test:
         ts_test = dataset[n_train:] ##Datos test
         self.validate_param(ts_train,precio)  # Metodo para validar parametros del modelo sarimax
 
-    def valida_estacionalidad(self, dataset,precio):
+    def valida_estacionalidad(self, dataset,precio, grafico):
         ##Dickey Fuller Aumentada (ADF)
         from statsmodels.tsa.stattools import adfuller
         # Aquí se usa un año como ventana, y el valor de cada vez t se reemplaza por el valor medio de los 12 meses anteriores (incluido él mismo), y la desviación estándar es la misma.
@@ -60,7 +65,7 @@ class Sarimax_Test:
         std = plt.plot(rolstd, color='black', label='Rolling standard deviation')
         plt.legend(loc='best')
         plt.title('Rolling Mean & Standard Deviation '+ precio)
-        plt.savefig('results/04_Validacion_estacionalidad_ADF_'+ precio+'.png')
+        plt.savefig('results/04_Validacion_estacionalidad_ADF_'+ precio+grafico+'.png')
         # Dickey-Fuller test:
         dftest = adfuller(dataset, autolag='AIC')
         variables=['Test Statistic', 'p-value', '#Lags Used', 'Number of Observations Used']
@@ -71,15 +76,18 @@ class Sarimax_Test:
         for key, value in dftest[4].items():
             dfoutput['Critical value (%s)' % key] = value
             variables.append('Critical value (%s)' % key)
+        print(dfoutput)
         ##Guardar resultados en txt
-        f = open('results/04_estacionalidad_'+precio+".txt", "w")
+        f = open('results/04_estacionalidad_'+precio+grafico+".txt", "w")
         print('estacionalidad precio mora '+precio,file=f)
         print(dfoutput,file=f)
         f.close()
 
+
+
     #Gráfico estadístico, ACF, gráfico PACF
     def grafico_est(self,dataset,titulo ):
-        lags = 20
+        lags = 30
         title = 'Serie de tiempo Mora '+titulo
         figsize = (14, 8)
         fig = plt.figure(figsize=figsize)
@@ -126,3 +134,13 @@ class Sarimax_Test:
         table_res=table_res.sort_values('aic', ascending=True).reset_index(drop=True)
         res_best=table_res[0:6]
         res_best.to_csv('results/'+precio+'res_best.csv')##Guardar como plano mejores resultados
+        # creacion de una serie diferencial
+
+    def difference(self, datos):
+        diff = list()
+        for i in range(1, len(datos)):
+            value = datos[i] - datos[i - 1]
+            diff.append(value)
+        return pd.Series(diff)
+
+

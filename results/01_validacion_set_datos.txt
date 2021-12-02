@@ -1,0 +1,28 @@
+Set de datos original
+            corriente  primera    extra
+fecha                                  
+2016-01-04    14000.0  16000.0  16000.0
+2016-01-05    14000.0  16000.0  16000.0
+2016-01-06    14000.0  16000.0  16000.0
+2016-01-07    24000.0  26000.0  26000.0
+2016-01-08    24000.0  26000.0  26000.0
+
+
+Cantidad de Filas y columnas: (1527, 3) 
+
+Nombre columnas: Index(['corriente', 'primera', 'extra'], dtype='object') 
+
+Set de datos modificado
+            corriente  primera    extra  year  month        day
+fecha                                                          
+2016-01-04    14000.0  16000.0  16000.0  2016      1     Monday
+2016-01-05    14000.0  16000.0  16000.0  2016      1    Tuesday
+2016-01-06    14000.0  16000.0  16000.0  2016      1  Wednesday
+2016-01-07    24000.0  26000.0  26000.0  2016      1   Thursday
+2016-01-08    24000.0  26000.0  26000.0  2016      1     Friday
+
+
+Cantidad de Filas y columnas: (1527, 6) 
+
+Nombre columnas: Index(['corriente', 'primera', 'extra', 'year', 'month', 'day'], dtype='object') 
+

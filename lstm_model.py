@@ -2,7 +2,7 @@ from math import sqrt
 
 import numpy as np
 from sklearn.preprocessing import MinMaxScaler
-from statsmodels.tools.eval_measures import rmse
+
 np.random.seed(4)
 import matplotlib.pyplot as plt
 import pandas as pd

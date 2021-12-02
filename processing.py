@@ -11,7 +11,7 @@ import sys
 class Procesamiento:
 	def __init__(self):
 		fecha_inicio = '2016-01-01'
-		fecha_fin = '2021-08-31'
+		fecha_fin = '2021-10-30'
 		url_corabastos = "https://api.precioscorabastos.com.co/precios/public/tendencia/producto?codigo_producto=204401&inicio=" + fecha_inicio + "&fin=" + fecha_fin
 		data_analysis.Analisis(url_corabastos)
 		##Clean data
