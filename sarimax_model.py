@@ -23,16 +23,19 @@ class Sarimax:
              ##Se adicionan los parametros dados de la evaluacion del modelo para precio corriente 0,27567.67067487708,"((2, 1, 2), (1, 1, 2, 7))"
             result_best = pd.read_csv('results/'+precio+'res_best.csv')
             result_best=result_best['param']
-            print('result_best',result_best[0].replace('((','(').replace('))',')'))
-            params =  list([(2, 1, 2), (2, 1, 1, 7)])
+            result_best=result_best[0].replace('((','').replace('))','').replace(')','').replace('(','').replace(' ','')
+            result_best=result_best.split(',')
+
+            params =  list([(int(result_best[0]),int(result_best[1]),int(result_best[2])), (int(result_best[3]),int(result_best[4]),int(result_best[5]),int(result_best[6]))])
+
 
         else :
             dataset= df.drop(['corriente'], axis=1)
             result_best = pd.read_csv('results/' + precio + 'res_best.csv')
             result_best = result_best['param']
-            print('result_best', result_best[0].replace('((', '(').replace('))', ')'))
-           ##Se adicionan los parametros dados de la evaluacion del modelo para precio primera  0,27581.105386271483,"((2, 1, 2), (2, 1, 2, 7))"
-            params = list([(1, 1, 1), (1, 1, 1, 7)])
+            result_best = result_best[0].replace('((', '').replace('))', '').replace(')', '').replace('(', '')
+            result_best = result_best.split(',')
+            params =  list([(int(result_best[0]),int(result_best[1]),int(result_best[2])), (int(result_best[3]),int(result_best[4]),int(result_best[5]),int(result_best[6]))])
 
         dataset['fecha'] = dataset['fecha'].astype(str)
         dataset['fecha'] = pd.to_datetime(dataset['fecha'])

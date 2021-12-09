@@ -8,8 +8,8 @@ Ljung-box p-values:
 ===========================================================================================
 Dep. Variable:                           corriente   No. Observations:                 2124
 Model:             SARIMAX(2, 1, 2)x(2, 1, [1], 7)   Log Likelihood              -15320.336
-Date:                             Tue, 30 Nov 2021   AIC                          30656.671
-Time:                                     11:28:17   BIC                          30701.930
+Date:                             Wed, 08 Dec 2021   AIC                          30656.671
+Time:                                     21:28:59   BIC                          30701.930
 Sample:                                 01-04-2016   HQIC                         30673.242
                                       - 10-27-2021                                         
 Covariance Type:                               opg                                         

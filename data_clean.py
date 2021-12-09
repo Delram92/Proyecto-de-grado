@@ -143,15 +143,34 @@ class Clean:
         ipc_final= float((df_ipc.loc[max(df_ipc.index)].indice))
         dataset_mora["primerakg"]= (dataset_mora["primera"]/7)
         dataset_mora["corrientekg"]= (dataset_mora["corriente"]/7)
+
+
+
+
         dataset_mora["primera_actualkg"]= round(dataset_mora["primerakg"]*(ipc_final/dataset_mora["indice"])).round(decimals=2).astype(int)
         dataset_mora["corriente_actualkg"]= round(dataset_mora["corrientekg"]*(ipc_final/dataset_mora["indice"])).round(decimals=2).astype(int)
+        atributos = ['primera', 'corriente']
 
-
+        dataset_mongo = dataset_mora
         dataset_mora = dataset_mora.drop(['primerakg', 'corrientekg', 'indice', 'primera', 'corriente'], axis=1)
+
         dataset_mora = dataset_mora.rename(
             columns={ 'primera_actualkg': 'primera', 'corriente_actualkg': 'corriente'})
-        atributos = ['primera', 'corriente']
+
         dataset_mora_save=  dataset_mora[atributos]
         dataset_mora_save=dataset_mora_save.asfreq('D', method='bfill') ##Se realiza llenado de valores vacios con el valor el metodo back Y SE ASIGNA LA FRECUENCIA A DIARIA
         dataset_mora_save.to_csv('data/mora_castilla_v3.csv')
+
+        dataset_mongo = dataset_mongo.drop(['primera_actualkg', 'corriente_actualkg', 'indice', 'primera', 'corriente','year', 'month', 'day'],
+                                           axis=1)
+        dataset_mongo = dataset_mongo.rename(
+            columns={'primerakg': 'primera', 'corrientekg': 'corriente'})
+        dataset_mongo['Date']= dataset_mongo.index.strftime('%Y-%m-%d')
+        dataset_mongo = dataset_mongo.asfreq('D',
+                                             method='bfill')  ##Se realiza llenado de valores vacios con el valor el metodo back Y SE ASIGNA LA FRECUENCIA A DIARIA
+
+
+        dataset_mongo.to_json('data/dataset_mongo.json', orient='records')
+
+
         return dataset_mora

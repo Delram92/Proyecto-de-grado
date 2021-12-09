@@ -2,58 +2,33 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="55eb7c76-c278-4762-9b30-1a777239d962" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/save_data.PY.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/1.1.INF_Serie histórica Meta de inflación IQY.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/1.2.5.IPC_Serie_variaciones.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/data/1.2.5.IPC_Serie_variaciones.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/mora_castilla.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/mora_castilla.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/mora_castilla_v2.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/mora_castilla_v2.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/mora_castilla_v3.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/mora_castilla_v3.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_analysis.py" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data_clean.py" beforeDir="false" afterPath="$PROJECT_DIR$/data_clean.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lstm_model.py" beforeDir="false" afterPath="$PROJECT_DIR$/lstm_model.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/processing.py" beforeDir="false" afterPath="$PROJECT_DIR$/processing.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/01_analisis_pre_bigotes_mora_01.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/01_analisis_pre_dia_05.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/01_analisis_pre_hist_mora_02.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/01_analisis_pre_meses_04.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/01_analisis_pre_time_series_03.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/01_analisis_pre_time_series_2020_06.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/02_clean_bigotes_mora_01.png" beforeDir="false" afterPath="$PROJECT_DIR$/results/02_clean_bigotes_mora_01.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/02_clean_dia_05.png" beforeDir="false" afterPath="$PROJECT_DIR$/results/02_clean_dia_05.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/02_clean_hist_mora_02.png" beforeDir="false" afterPath="$PROJECT_DIR$/results/02_clean_hist_mora_02.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/02_clean_meses_04.png" beforeDir="false" afterPath="$PROJECT_DIR$/results/02_clean_meses_04.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/02_clean_time_series_03.png" beforeDir="false" afterPath="$PROJECT_DIR$/results/02_clean_time_series_03.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/02_clean_time_series_2020_06.png" beforeDir="false" afterPath="$PROJECT_DIR$/results/02_clean_time_series_2020_06.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/03_real_bigotes_mora_01.png" beforeDir="false" afterPath="$PROJECT_DIR$/results/03_real_bigotes_mora_01.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/03_real_dia_05.png" beforeDir="false" afterPath="$PROJECT_DIR$/results/03_real_dia_05.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/03_real_hist_mora_02.png" beforeDir="false" afterPath="$PROJECT_DIR$/results/03_real_hist_mora_02.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/03_real_meses_04.png" beforeDir="false" afterPath="$PROJECT_DIR$/results/03_real_meses_04.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/03_real_time_series_03.png" beforeDir="false" afterPath="$PROJECT_DIR$/results/03_real_time_series_03.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/03_real_time_series_2020_06.png" beforeDir="false" afterPath="$PROJECT_DIR$/results/03_real_time_series_2020_06.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/04_Validacion_estacionalidad_ADF_corriente.png" beforeDir="false" afterPath="$PROJECT_DIR$/results/04_Validacion_estacionalidad_ADF_corriente.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/04_Validacion_estacionalidad_ADF_primera.png" beforeDir="false" afterPath="$PROJECT_DIR$/results/04_Validacion_estacionalidad_ADF_primera.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/04_estacionalidad_corriente.txt" beforeDir="false" afterPath="$PROJECT_DIR$/results/04_estacionalidad_corriente.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/04_estacionalidad_primera.txt" beforeDir="false" afterPath="$PROJECT_DIR$/results/04_estacionalidad_primera.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/04_grafica_estadistica_corriente.png" beforeDir="false" afterPath="$PROJECT_DIR$/results/04_grafica_estadistica_corriente.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/04_grafica_estadistica_primera.png" beforeDir="false" afterPath="$PROJECT_DIR$/results/04_grafica_estadistica_primera.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/results/01_analisisDANE_pre_profiling.html" beforeDir="false" afterPath="$PROJECT_DIR$/results/01_analisisDANE_pre_profiling.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/results/01_analisiscorabastos_pre_profiling.html" beforeDir="false" afterPath="$PROJECT_DIR$/results/01_analisiscorabastos_pre_profiling.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/results/01_profiling_IPC.html" beforeDir="false" afterPath="$PROJECT_DIR$/results/01_profiling_IPC.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/results/01_profiling_corabastos.html" beforeDir="false" afterPath="$PROJECT_DIR$/results/01_profiling_corabastos.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/results/01_profiling_dane.html" beforeDir="false" afterPath="$PROJECT_DIR$/results/01_profiling_dane.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/results/02_clean_profiling.html" beforeDir="false" afterPath="$PROJECT_DIR$/results/02_clean_profiling.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/results/03_real_profiling.html" beforeDir="false" afterPath="$PROJECT_DIR$/results/03_real_profiling.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/results/05_resultados_corriente.txt" beforeDir="false" afterPath="$PROJECT_DIR$/results/05_resultados_corriente.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/results/05_resultados_primera.txt" beforeDir="false" afterPath="$PROJECT_DIR$/results/05_resultados_primera.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/05_validacion_corriente_prediccion.png" beforeDir="false" afterPath="$PROJECT_DIR$/results/05_validacion_corriente_prediccion.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/05_validacion_primera_prediccion.png" beforeDir="false" afterPath="$PROJECT_DIR$/results/05_validacion_primera_prediccion.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/06_validacion_lstm_prediccion_corriente.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/06_validacion_lstm_prediccion_primera.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/06_validaciongf01_lstm_prediccion_corriente.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/06_validaciongf01_lstm_prediccion_primera.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/corrienteres_best.csv" beforeDir="false" afterPath="$PROJECT_DIR$/results/corrienteres_best.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/primerares_best.csv" beforeDir="false" afterPath="$PROJECT_DIR$/results/primerares_best.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/sarimax_corriente_prediccion.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/results/profiling_setdatos_final.html" beforeDir="false" afterPath="$PROJECT_DIR$/results/profiling_setdatos_final.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sarimax_model.py" beforeDir="false" afterPath="$PROJECT_DIR$/sarimax_model.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sarimax_model_test.py" beforeDir="false" afterPath="$PROJECT_DIR$/sarimax_model_test.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -69,7 +44,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
-  <component name="RunManager" selected="Python.processing">
+  <component name="RunManager" selected="Python.model">
     <configuration name="main" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="agroacacias" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -133,13 +108,31 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="validate_model" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="save_data.PY" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="agroacacias" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/save_data.PY.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="validate_model" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="agroacacias" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
       <option name="SDK_HOME" value="" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="IS_MODULE_SDK" value="true" />
@@ -156,9 +149,10 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.processing" />
         <item itemvalue="Python.model" />
         <item itemvalue="Python.validate_model" />
+        <item itemvalue="Python.processing" />
+        <item itemvalue="Python.save_data.PY" />
         <item itemvalue="Python.main" />
       </list>
     </recent_temporary>
@@ -173,5 +167,17 @@
       <updated>1637247947665</updated>
     </task>
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
 </project>
