@@ -41,7 +41,7 @@ class Analisis:
         profile.to_file(output_file="results/01_profiling_corabastos.html")
 
         col_graf = ['corriente', 'primera', 'extra']
-        self.profiling_data(df,'01_analisiscorabastos_pre_',col_graf)
+        self.profiling_data(df,'01_analisiscorabastos_pre_',col_graf, ' (carga)')
         ##guardar_datos v2
         df.to_csv('data/mora_castilla_v2.csv')
 
@@ -68,7 +68,7 @@ class Analisis:
         profile.to_file(output_file="results/01_profiling_dane.html")
 
         col_graf = ['VAL_MAX', 'VAL_MIN']
-        self.profiling_data(df_dane, '01_analisisDANE_pre_', col_graf)
+        self.profiling_data(df_dane, '01_analisisDANE_pre_', col_graf, ' (kg)')
 
         #####################Validacion set de datos IPC ##################
         ##Dataset IPC desde 2016 a la fecha
@@ -112,7 +112,7 @@ class Analisis:
             print(sys.exc_info()[0])
 
 
-    def profiling_data(self, df, imagen, col_graf):
+    def profiling_data(self, df, imagen, col_graf, medida):
         profile = df.profile_report(title= imagen +'Perfilado set de datos')
         profile.to_file(output_file='results/'+imagen +'profiling.html')
 
@@ -131,22 +131,23 @@ class Analisis:
         plt.close()
 
         """Validacion de atributos series de tiempo"""
-        ejes = df[col_graf].plot(figsize=(20, 20), subplots=True)
+        ejes = df[col_graf].plot( figsize=(15, 8) ,subplots=True, title='Serie de tiempo precio mora de castilla', fontsize=12,sharex=True)
         for eje in ejes:
-            eje.set_ylabel('Precio diario')
-        plt.savefig('results/'+imagen+'time_series_03.png')
+            eje.set_ylabel('Precio diario '+medida)
+
+        plt.savefig('results/'+imagen+'time_series_03.png',fontsize=12)
         plt.close()
 
         """Validacion de datos, enfocados por mes, para revisar comportamiento en pandemia"""
 
-        fig, ejes = plt.subplots(num_subplots, 1, figsize=(11, 10), sharex=True)
+        fig, ejes = plt.subplots(num_subplots, 1, figsize=(11, 9),  sharex=True)
         for nombre, eje in zip(col_graf, ejes):
             sns.boxplot(data=df, x='month', y=nombre, ax=eje)
             eje.set_title(nombre)
             if eje != ejes[-1]:
                 eje.set_xlabel('')
             for eje in ejes:
-                eje.set_ylabel('Precio diario')
+                eje.set_ylabel('Precio diario '+medida, fontsize=12)
         plt.savefig('results/'+imagen+'meses_04.png')
         plt.close()
 
@@ -158,14 +159,14 @@ class Analisis:
             if eje != ejes[-1]:
                 eje.set_xlabel('')
             for eje in ejes:
-                eje.set_ylabel('Precio diario')
+                eje.set_ylabel('Precio diario '+medida,  fontsize=12)
         plt.savefig('results/'+imagen+'dia_05.png')
         plt.close()
 
         """Validacion de datos, enfocados en 2020, para revisar comportamiento en pandemia"""
         df_2020 = df.loc['2020']
-        ejes = df_2020[col_graf].plot(figsize=(15, 15), subplots=True)
+        ejes = df_2020[col_graf].plot(figsize=(15, 8), subplots=True,  title='Serie de tiempo precio mora de castilla', fontsize=12)
         for eje in ejes:
-            eje.set_ylabel('Precio diario')
+            eje.set_ylabel('Precio diario '+medida,   fontsize=12)
         plt.savefig('results/'+imagen+'time_series_2020_06.png')
         plt.close()

@@ -17,6 +17,7 @@ class Sarimax_Test:
     def __init__(self,precio):
         #Lectura de los datos
         df = pd.read_csv ('data/mora_castilla_v3.csv', parse_dates=True)
+        print('Ser_datos_final', df)
         if precio=='corriente':
             dataset= df.drop(['primera'], axis=1)
         else :

@@ -53,14 +53,14 @@ class Clean:
         print('df_clean', df_clean.head())
         ##Validacion luego de limpieza
         col_graf = ['corriente', 'primera']
-        prf.Analisis.profiling_data(self, df_clean, '02_clean_', col_graf)
+        prf.Analisis.profiling_data(self, df_clean, '02_clean_', col_graf, '(kg)')
         df_merge= self.merge_dataset(df_clean,df_ipc)
         atributos = ['primera', 'corriente']
         print(df_merge.head())
         profile = df_merge.profile_report(title="Perfilado set de datos set datos final")
         profile.to_file(output_file="results/profiling_setdatos_final.html")
 
-        prf.Analisis.profiling_data(self, df_merge, '03_real_', atributos)
+        prf.Analisis.profiling_data(self, df_merge, '03_real_', atributos, '(kg)')
 
     def replace_outliers(self, df):
         df_clean = df

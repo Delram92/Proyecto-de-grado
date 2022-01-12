@@ -93,5 +93,5 @@ class Sarimax:
 
         dataset_prueba = pd.merge(ts_test, prediccion_graf, on=['fecha'], how='outer')
         col_graf = [precio, 'prediccion']
-        ejes = dataset_prueba[col_graf].plot(figsize=(20, 20))
+        ejes = dataset_prueba[col_graf].plot(figsize=(10, 9), fontsize=(12), title='Prediccion mora de castilla precio '+precio)
         plt.savefig('results/05_validacion_'+precio+'_prediccion.png')
