@@ -3,39 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="55eb7c76-c278-4762-9b30-1a777239d962" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/dataset_mongo.json" beforeDir="false" afterPath="$PROJECT_DIR$/data/dataset_mongo.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_analysis.py" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_clean.py" beforeDir="false" afterPath="$PROJECT_DIR$/data_clean.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/01_analisisDANE_pre_dia_05.png" beforeDir="false" afterPath="$PROJECT_DIR$/results/01_analisisDANE_pre_dia_05.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/01_analisisDANE_pre_meses_04.png" beforeDir="false" afterPath="$PROJECT_DIR$/results/01_analisisDANE_pre_meses_04.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/01_analisisDANE_pre_profiling.html" beforeDir="false" afterPath="$PROJECT_DIR$/results/01_analisisDANE_pre_profiling.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/01_analisisDANE_pre_time_series_03.png" beforeDir="false" afterPath="$PROJECT_DIR$/results/01_analisisDANE_pre_time_series_03.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/01_analisisDANE_pre_time_series_2020_06.png" beforeDir="false" afterPath="$PROJECT_DIR$/results/01_analisisDANE_pre_time_series_2020_06.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/01_analisiscorabastos_pre_dia_05.png" beforeDir="false" afterPath="$PROJECT_DIR$/results/01_analisiscorabastos_pre_dia_05.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/01_analisiscorabastos_pre_meses_04.png" beforeDir="false" afterPath="$PROJECT_DIR$/results/01_analisiscorabastos_pre_meses_04.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/01_analisiscorabastos_pre_profiling.html" beforeDir="false" afterPath="$PROJECT_DIR$/results/01_analisiscorabastos_pre_profiling.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/01_analisiscorabastos_pre_time_series_03.png" beforeDir="false" afterPath="$PROJECT_DIR$/results/01_analisiscorabastos_pre_time_series_03.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/01_analisiscorabastos_pre_time_series_2020_06.png" beforeDir="false" afterPath="$PROJECT_DIR$/results/01_analisiscorabastos_pre_time_series_2020_06.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/01_profiling_IPC.html" beforeDir="false" afterPath="$PROJECT_DIR$/results/01_profiling_IPC.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/01_profiling_corabastos.html" beforeDir="false" afterPath="$PROJECT_DIR$/results/01_profiling_corabastos.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/01_profiling_dane.html" beforeDir="false" afterPath="$PROJECT_DIR$/results/01_profiling_dane.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/02_clean_dia_05.png" beforeDir="false" afterPath="$PROJECT_DIR$/results/02_clean_dia_05.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/02_clean_meses_04.png" beforeDir="false" afterPath="$PROJECT_DIR$/results/02_clean_meses_04.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/02_clean_profiling.html" beforeDir="false" afterPath="$PROJECT_DIR$/results/02_clean_profiling.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/02_clean_time_series_03.png" beforeDir="false" afterPath="$PROJECT_DIR$/results/02_clean_time_series_03.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/02_clean_time_series_2020_06.png" beforeDir="false" afterPath="$PROJECT_DIR$/results/02_clean_time_series_2020_06.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/03_real_dia_05.png" beforeDir="false" afterPath="$PROJECT_DIR$/results/03_real_dia_05.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/03_real_meses_04.png" beforeDir="false" afterPath="$PROJECT_DIR$/results/03_real_meses_04.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/03_real_profiling.html" beforeDir="false" afterPath="$PROJECT_DIR$/results/03_real_profiling.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/03_real_time_series_03.png" beforeDir="false" afterPath="$PROJECT_DIR$/results/03_real_time_series_03.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/03_real_time_series_2020_06.png" beforeDir="false" afterPath="$PROJECT_DIR$/results/03_real_time_series_2020_06.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/05_resultados_corriente.txt" beforeDir="false" afterPath="$PROJECT_DIR$/results/05_resultados_corriente.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/05_resultados_primera.txt" beforeDir="false" afterPath="$PROJECT_DIR$/results/05_resultados_primera.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/05_validacion_corriente_prediccion.png" beforeDir="false" afterPath="$PROJECT_DIR$/results/05_validacion_corriente_prediccion.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/05_validacion_primera_prediccion.png" beforeDir="false" afterPath="$PROJECT_DIR$/results/05_validacion_primera_prediccion.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/profiling_setdatos_final.html" beforeDir="false" afterPath="$PROJECT_DIR$/results/profiling_setdatos_final.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sarimax_model.py" beforeDir="false" afterPath="$PROJECT_DIR$/sarimax_model.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sarimax_model_test.py" beforeDir="false" afterPath="$PROJECT_DIR$/sarimax_model_test.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
